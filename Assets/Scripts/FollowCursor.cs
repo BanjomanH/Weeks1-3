@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class FirstScript : MonoBehaviour
+public class FollowCursor : MonoBehaviour
 {
-    public float speed = 1;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +16,7 @@ public class FirstScript : MonoBehaviour
     {
         Vector2 pos = transform.position;
 
-        if (pos.x > 8.85f || pos.x < -8.85f)
-        {
-            speed = -speed;
-        }
-
-        pos.x += speed * Time.deltaTime;
+        pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         transform.position = pos;
     }
