@@ -29,7 +29,8 @@ public class Bullet : MonoBehaviour
 
     void Movement()
     {
-        //transform.position += transform.up * speed * Time.deltaTime;
-        transform.Translate(transform.up * speed * Time.deltaTime);
+        transform.position += transform.up * speed * Time.deltaTime;
+        //transform.Translate(transform.up * speed * Time.deltaTime);
+        Destroy(gameObject, 5);
     }
 }
