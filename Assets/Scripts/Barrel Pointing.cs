@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BarrelPointing : MonoBehaviour
 {
     public GameObject prefab;
+    public Transform target;
+    public TankShell tankShell;
+    public List<GameObject> bulletList = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +30,14 @@ public class BarrelPointing : MonoBehaviour
             GameObject shot = Instantiate(prefab);
             shot.transform.position = transform.position;
             shot.transform.up = pointing;
+
+            tankShell = shot.GetComponent<TankShell>();
+            bulletList.Add(shot);
+        }
+
+        for (int i = 0; i < bulletList.Count(); i++)
+        {
+            
         }
     }
 }
