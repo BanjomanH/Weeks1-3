@@ -47,11 +47,12 @@ public class ForkCode : MonoBehaviour
     bool checkArea(Vector3 area)
     {
         bool isInArea = false;
+        Vector2 forkPos = handPos.position;
 
-        if (transform.position.x > area.x - hitbox && transform.position.x < area.x + hitbox)
+        if (forkPos.x > area.x - hitbox && forkPos.x < area.x + hitbox)
         {
             print("reached!");
-            if (transform.position.y > area.y - hitbox && transform.position.y < area.y + hitbox)
+            if (forkPos.y > area.y - hitbox && forkPos.y < area.y + hitbox)
             {
                 print("done!");
                 isInArea = true;

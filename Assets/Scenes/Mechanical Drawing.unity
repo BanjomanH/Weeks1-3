@@ -1389,9 +1389,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 1600039386}
-  pastaPos: {x: -1.5442858, y: -0.7442857, z: -0.0064873095}
-  mouthPos: {x: -1.5442858, y: -0.7442857, z: -0.0064873095}
-  hitbox: 0.1
+  pastaPos: {x: 1, y: -0.5, z: 0}
+  mouthPos: {x: 0, y: 2, z: 0}
+  hitbox: 0.68
   spaghetti: 1
 --- !u!1 &1561580380
 GameObject:
