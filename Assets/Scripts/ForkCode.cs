@@ -7,8 +7,10 @@ using UnityEngine;
 public class ForkCode : MonoBehaviour
 {
     public Transform handPos;
+    public Transform shoulder;
     public Vector3 pastaPos;
     public Vector3 mouthPos;
+    public float maxDistance;
     public float hitbox;
     public bool spaghetti = true;
 
@@ -24,6 +26,8 @@ public class ForkCode : MonoBehaviour
         Vector3 cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         cursor.z = 0;
+        cursor.x = Mathf.Clamp(cursor.x, shoulder.position.x - maxDistance, shoulder.position.x + maxDistance);
+        cursor.y = Mathf.Clamp(cursor.y, shoulder.position.y - maxDistance, shoulder.position.y + maxDistance);
 
         handPos.position = cursor;
 
@@ -51,10 +55,8 @@ public class ForkCode : MonoBehaviour
 
         if (forkPos.x > area.x - hitbox && forkPos.x < area.x + hitbox)
         {
-            print("reached!");
             if (forkPos.y > area.y - hitbox && forkPos.y < area.y + hitbox)
             {
-                print("done!");
                 isInArea = true;
             }
         }

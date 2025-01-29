@@ -1389,8 +1389,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 1600039386}
+  shoulder: {fileID: 1862997152}
   pastaPos: {x: 1, y: -0.5, z: 0}
   mouthPos: {x: 0, y: 2, z: 0}
+  maxDistance: 1.5
   hitbox: 0.68
   spaghetti: 1
 --- !u!1 &1561580380
@@ -2030,6 +2032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hand: {fileID: 1600039386}
   shoulder: {fileID: 1862997152}
+  maxDistance: 1.5
 --- !u!1 &1853057003
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class ArmCode : MonoBehaviour
 {
     public Transform hand;
     public Transform shoulder;
+    public float maxDistance;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,11 @@ public class ArmCode : MonoBehaviour
     void Update()
     {
         Vector3 cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         cursor.z = 0;
+        cursor.x = Mathf.Clamp(cursor.x, shoulder.position.x - maxDistance, shoulder.position.x + maxDistance);
+        cursor.y = Mathf.Clamp(cursor.y, shoulder.position.y - maxDistance, shoulder.position.y + maxDistance);
+
         Vector2 pointing = cursor - transform.position;
         transform.up = pointing;
 
