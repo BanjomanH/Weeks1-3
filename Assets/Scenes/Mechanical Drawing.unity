@@ -723,6 +723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 955987458}
   - component: {fileID: 955987459}
+  - component: {fileID: 955987460}
   m_Layer: 0
   m_Name: Dangle (1)
   m_TagString: Untagged
@@ -739,8 +740,8 @@ Transform:
   m_GameObject: {fileID: 955987457}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.079, y: -0.339, z: 0.0045411168}
-  m_LocalScale: {x: 0.0875, y: 0.6375, z: 1}
+  m_LocalPosition: {x: 0.079, y: -0.22299987, z: 0.0045411168}
+  m_LocalScale: {x: 0.0875, y: 0.43, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1556578072}
@@ -797,6 +798,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &955987460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955987457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7560456e7923449868806a34fde9aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dangle:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.9471394
+      outSlope: 1.9471394
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50054055
+      value: 0.97462225
+      inSlope: -0.0017865896
+      outSlope: -0.0017865896
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.00032043457
+      inSlope: -1.9507126
+      outSlope: -1.9507126
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sec: 0
+  speed: 0.75
 --- !u!1 &1030558128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,6 +2670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904719624}
   - component: {fileID: 1904719625}
+  - component: {fileID: 1904719626}
   m_Layer: 0
   m_Name: Dangle
   m_TagString: Untagged
@@ -2638,8 +2687,8 @@ Transform:
   m_GameObject: {fileID: 1904719623}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.135, y: -0.256, z: 0.0045411168}
-  m_LocalScale: {x: 0.0875, y: 0.6375, z: 1}
+  m_LocalPosition: {x: -0.135, y: -0.14, z: 0.0045411168}
+  m_LocalScale: {x: 0.0875, y: 0.43, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1556578072}
@@ -2696,6 +2745,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1904719626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904719623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7560456e7923449868806a34fde9aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dangle:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -0.016974552
+      outSlope: -0.016974552
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.5410817
+    - serializedVersion: 3
+      time: 0.50054055
+      value: 0.97462225
+      inSlope: -0.0017865896
+      outSlope: -0.0017865896
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.00032043457
+      inSlope: 0.0013982598
+      outSlope: 0.0013982598
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4588294
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sec: 0
+  speed: 0.75
 --- !u!1 &1987682645
 GameObject:
   m_ObjectHideFlags: 0
