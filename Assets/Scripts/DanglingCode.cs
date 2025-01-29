@@ -6,25 +6,22 @@ using UnityEngine;
 
 public class DanglingCode : MonoBehaviour
 {
-    public AnimationCurve dangle;
+    public AnimationCurve dangle; // The curve for the dangling animation
     [Range(0, 1)]
-    public float sec;
-    public float speed;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float sec; // A float for the time passed
+    public float speed; // How fast the sec variable progresses
 
     // Update is called once per frame
     void Update()
     {
+        // Progresses sec upwards by speed in context of the time between the last frame
         sec += speed * Time.deltaTime;
+        // resets sec if it goes too high
         if (sec > 1)
         {
             sec = 0;
         }
+        // Sets the rotation to be the same for x and y, but adds some more rotation according to dangle
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 30 * dangle.Evaluate(sec) - 15);
     }
 }
