@@ -28,7 +28,7 @@ public class FaucetCode : MonoBehaviour
                 stream = true;
             }
         }
-
+        
         if (stream == true)
         {
             transform.localScale = Vector3.one;
